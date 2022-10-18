@@ -1,0 +1,240 @@
+/** todos los estilos generales**/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/**
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    color: #603F34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+}
+
+h2 {
+    color: #603F34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    line-height: 1.6;
+}
+
+h3 {
+    color: #603F34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    line-height: 1.6;
+}
+
+h4 {
+    color: #603F34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    line-height: 1.6;
+}
+
+h5 {
+    color: #603F34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    line-height: 1.6;
+}
+
+h6 {
+    color: #603F34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+    line-height: 1.6;
+}
+
+p {
+    color: #603F34;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+    line-height: 1.6;
+}
+
+
+label {
+    color: #603F34;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+}
+
+input {
+    color: #603F34;
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
+/**todos los estilos del header**/
+
+.fondoHeader {
+    width: 100%;
+    height: 100vh;
+    position: 0 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #E5DCCA;
+    border: 2px solid #603F34;
+}
+
+.logo{
+    width: 40px;
+}
+
+.usuario {
+    width: 80px;
+    font-size: 18px;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 900;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #603F34;
+}
+
+.inicio{
+    background-image: url(../assets/image/backgroundNav.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.cubrir {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: #e5dcca3a;
+}
+
+div {
+    border: 2px solid #603F34;
+    margin: 0;
+}
+/**todos los estilos del main**/
+
+
+.siteMain {
+    background-color: #E5DCCA;
+    padding: 50px;
+}
+
+.siteMainOthers {
+    padding: 100px;
+    background-color: #E5DCCA;
+}
+
+
+.sectionStyle {
+    display: flex;
+    padding: 25px;
+    text-align: left;
+    line-height: 3;
+}
+
+.sectionStyle p {
+    margin: auto;
+}
+
+.sectionStyle img {
+    padding: 25px;
+    width: 500px;
+}
+
+.sectionStyle a {
+    text-decoration: none;
+    padding: 25px;
+    background-color: #603F34;
+    border: 2px solid #603F34;
+    padding: 5px;
+    color: #E79A33;
+}
+
+.sectionStyle form {
+    width: 600px;
+}
+
+.sectionStyle form fieldset {
+    padding: 50px;
+}
+
+.sectionStyle form label {
+    display: block;
+}
+
+.enviar {
+    text-decoration: none;
+    padding: 5px;
+    background-color: #603F34;
+    border: 2px solid #603F34;
+    padding: 5px;
+    color: #E79A33;
+    font-weight: bold;
+}
+
+/** todos los estilos del footer**/
+
+.footerStyle {
+    background-color: #696E6C;
+    padding: 25px;
+}
+
+.footerStyle h3 {
+    text-decoration: none;
+    color: #E5DCCA;
+    text-align: center;
+}
+
+.footerStyle h5 {
+    color: #E5DCCA;
+    text-align: center;
+}
+
+.footerStyle h6 {
+    color: #E5DCCA;
+    text-align: center;
+}
+
+.footerStyle a {
+    text-decoration: none;
+    display: block;
+    color: #E5DCCA;
+    font-weight: bold;
+    text-align: center;
+}
+
+.footerStyle img {
+    width: 40px;
+}
+
+.footerSocial {
+    width: 100px;
+    display: flex;
+}
