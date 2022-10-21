@@ -5,19 +5,25 @@
     box-sizing: border-box;
 }
 
-
-/**
-body {
-    overflow-x: hidden;
+html {
+    font-size: 62,5%;
 }
+
+
 
 h1 {
-    color: #603F34;
+    color: #E79A33;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 4.0rem;
 }
-
+p {
+    color: #E5DCCA;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    line-height: 1.6;
+}
+/**
 h2 {
     color: #603F34;
     font-family: 'Josefin Sans', sans-serif;
@@ -73,74 +79,106 @@ input {
     font-weight: 100;
 }
 
-/**todos los estilos del header**/
+/** HEADER STYLE**/
 
-.fondoHeader {
-    width: 100%;
-    height: 100vh;
-    position: 0 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container-grid {
+    background-color: aquamarine;
 }
 
-nav {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 5px 8%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #E5DCCA;
-    border: 2px solid #603F34;
-}
-
-.logo{
-    width: 40px;
-}
-
-.usuario {
-    width: 80px;
-    font-size: 18px;
-}
-
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 40px;
-    font-family: 'Josefin Sans', sans-serif;
-    font-weight: 900;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: #603F34;
-}
-
-.inicio{
-    background-image: url(../assets/image/backgroundNav.jpg);
+header {
+    display: grid;
+    background-image: url(../assets/image/aji.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
-}
-
-.cubrir {
-    height: 100%;
     width: 100%;
-    position: absolute;
-    background-color: #e5dcca3a;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+    "box-0 box-0 box-0 box-0 box-0"
+    ". . . . ."
+    ". . . box-4 box-4"
+    ". . . box-4 box-4"
+    ". . . . ."
+    ;
 }
 
-div {
-    border: 2px solid #603F34;
-    margin: 0;
+nav {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    backdrop-filter: blur(4px);
+    height: 100px;
 }
-/**todos los estilos del main**/
+
+nav ul {
+    display: flex;
+    list-style: none;
+    text-decoration: none;
+    gap: 6.0rem;
+    padding: 2.0rem;
+}
+
+nav li a:hover {
+    color: #E79A33;
+}
+
+.navBar li a {
+    text-decoration: none;
+    color: #E5DCCA;
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    font-size: larger;
+}
+
+.logo{
+    width: 2.5rem;
+    margin: 1.5rem;
+}
+
+.usuario {
+    width: 4.0rem;
+    margin: 1.5rem;
+}
+
+.box-0 {
+    grid-area: box-0;
+    display: flex;
+}
+
+.box-4 {
+    grid-area: box-4;
+    color: #E79A33;
+}
 
 
+
+/** MAIN STYLE**/
+
+main {
+    grid-area: main;
+    border: 2px solid black;
+}
+
+
+
+/** FOOTER STYLE**/
+
+footer {
+    grid-area: footer;
+    border: 2px solid black;
+    background-color: blue;
+}
+
+/** APLICANDO GRIDS **/
+
+
+
+
+
+
+/**
 .siteMain {
     background-color: #E5DCCA;
     padding: 50px;
@@ -200,6 +238,7 @@ div {
 }
 
 /** todos los estilos del footer**/
+/**
 
 .footerStyle {
     background-color: #696E6C;
