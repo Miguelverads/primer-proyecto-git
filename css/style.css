@@ -7,7 +7,7 @@
 }
 
 html {
-    font-size: 62,5%;
+    font-size: 62.5%;
 }
 
 h1 {
@@ -63,7 +63,7 @@ p {
     font-family: 'Lato', sans-serif;
     font-weight: 700;
     line-height: 1.6;
-    font-size: 1.6rem;
+    font-size: 16px;
 }
 
 
@@ -140,6 +140,7 @@ nav li a {
 .box-4 {
     grid-area: box-4;
     color: #E79A33;
+    padding-right: 8.0rem;
 }
 
 
@@ -148,6 +149,7 @@ nav li a {
 
 .container-body {
     background-color: #f5f0f0;
+    width: 100%;
 }
 
 .container-left {
@@ -158,19 +160,21 @@ nav li a {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
-    ". . . . . "
+    ". . . . ."
     "box-5 box-5 box-7 box-7 box-7"
     "box-5 box-5 box-7 box-7 box-7"
-    "box-5 box-5 box-7 box-7 box-7"
-    "box-6 . . . ."
-    ". . . . . "
+    "box-6 . box-7 box-7 box-7"
+    ". . . . ."
     ;
-    gap: 10px;
-    padding: 2.5rem;
+    gap: 2.0rem;
 }
 
 .box-5 {
     grid-area: box-5;
+    display: flex;
+    flex-direction:column ;
+    padding-left: 4.0rem;
+    justify-content: center;
 }
 
 .box-5 h2 {
@@ -178,6 +182,7 @@ nav li a {
 }
 .box-6 {
     grid-area: box-6;
+    padding-left: 4.0rem;
 }
 
 .box-6 a {
@@ -209,18 +214,19 @@ nav li a {
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: 
     ". . . . ."
+    "box-8 box-8 box-8 . ."
     "box-8 box-8 box-8 box-9 box-9"
-    "box-8 box-8 box-8 box-9 box-9"
-    "box-8 box-8 box-8 box-9 box-9"
-    ". . . box-10 ."
+    "box-8 box-8 box-8 box-10 box-10"
     ". . . . ."
     ;
-    padding: 2.5rem;
+    gap: 2.0rem;
 }
+
 
 .box-8 {
     grid-area: box-8;
     display: flex;
+    justify-content: space-around;
 }
 
 .box-8 img {
@@ -230,6 +236,7 @@ nav li a {
 
 .box-9 {
     grid-area: box-9;
+    padding-right: 8.0rem;
 }
 
 .box-9 p {
@@ -474,4 +481,131 @@ footer {
     color: #603F34;
     font-weight: bold;
     font-size: 1.6rem;
+}
+
+
+
+/** ====== RESPONSIVE ====== **/
+
+
+/** punto de quiebre para tablet **/
+
+@media (max-width: 768px) {
+    .container-header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "box-0 box-0 box-0"
+    ". . ."
+    ". box-4 box-4"
+    ". . ."
+    ;
+}
+    .container-left {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "box-5 . ."
+    "box-5 box-7 box-7"
+    "box-5 box-7 box-7"
+    "box-6 . ."
+    ". . ."
+    ;
+    }
+    .container-right {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    ". . box-9"
+    "box-8 box-8 box-9"
+    "box-8 box-8 box-9"
+    ". . box-10"
+    ". . ."
+    ;
+}
+    .container-contact {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "box-11 box-12"
+        "box-11 box-12"
+        "box-11 box-12"
+        ". . ."
+        ;
+    }
+    .container-menu {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "box-19 box-19 ."
+        "box-20 box-20 ."
+        "box-21 box-21 ."
+        ;
+}
+.container-footer { 
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 250px auto 100px;
+    grid-template-areas:
+    "info info info"
+    ". rrss ."
+    "copyright copyright copyright"
+    ;
+}
+}
+
+/** punto de quiebre para mobile **/
+
+@media (max-width: 576px) {
+    .container-header {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "box-0"
+        "box-4"
+        ;
+    }
+        .container-left {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "box-5"
+        "box-7"
+        "box-6"
+        ;
+        }
+        .container-right {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+        "box-9"
+        "box-8"
+        "box-10"
+        ;
+    }
+        .container-contact {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-areas:
+            "box-11"
+            "box-12"
+            ;
+        }
+        .container-menu {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+            "box-19"
+            "box-20"
+            "box-21"
+            ;
+    }
+    .container-footer { 
+        grid-template-columns: 1fr;
+        grid-template-rows: 250px auto 100px;
+        grid-template-areas:
+        "info"
+        "rrss"
+        "copyright"
+        ;
+    }
 }
