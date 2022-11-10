@@ -1,0 +1,97 @@
+@media (max-width: 576px) {
+    Header {
+        nav {
+            display: none;
+        }
+        .usuario{
+            display: none;
+        }
+        .menu-check{
+            display: none;
+        }
+        .menu-check:not(:checked) ~ nav{
+            display: none;
+        }
+        .menu-check:checked ~ nav{
+            display: flex;
+        }
+        .hamburguesa {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            font-size: 2.0rem;
+            font-weight: bolder;
+            align-items: center;
+            margin-right: 0.7rem;
+            .menu{
+                border: #603F34 solid;
+                border-radius: 0.5rem;
+                &:hover{
+                    background-color: #E79A33 ;
+                    color: #E5DCCA;
+                }
+            }
+            .menu-cerrar{
+                display: none;
+            }
+            .menu-check:checked ~ label .menu-abrir{
+                display: none;
+            }
+            .menu-check:checked ~label .menu-cerrar {
+                display: block;
+            }
+        }
+        header .hamburgesa nav {
+            position: absolute;
+            padding: 0.5rem;
+            margin: 0.5rem;
+            height: 100%;
+            background-color: #603F34;
+            color: #E5DCCA;
+        }
+}
+    .container-left {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-5"
+            "box-7"
+            "box-6"
+        ;
+    }
+    .container-right {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-9"
+            "box-8"
+            "box-10"
+        ;
+    }
+    .container-contact {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "box-11"
+            "box-12"
+        ;
+    }
+    .container-menu {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-19"
+            "box-20"
+            "box-21"
+        ;
+    }
+    .container-footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 15.0rem auto 5.0rem;
+        grid-template-areas:
+            "info"
+            "rrss"
+            "copyright"
+        ;
+    }
+}

@@ -1,0 +1,66 @@
+.container-left{
+    background-color: #E79A33;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". . . . ."
+        "box-5 box-5 box-7 box-7 box-7"
+        "box-5 box-5 box-7 box-7 box-7"
+        "box-6 . box-7 box-7 box-7"
+        ". . . . ."
+    ;
+    gap: 2.0rem;
+        .box-5{
+            grid-area: box-5;
+            display: flex;
+            flex-direction: column;
+            padding-left: 4.0rem;
+            justify-content: center;
+                h1{
+                    color: #603F34;
+                }
+            } 
+        .box-7{
+            grid-area: box-7;
+            display: flex;
+            img{
+                border-radius: 5.0rem;
+            }
+        }
+}
+
+.container-right{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". . . . ."
+        "box-8 box-8 box-8 . ."
+        "box-8 box-8 box-8 box-9 box-9"
+        "box-8 box-8 box-8 box-10 box-10"
+        ". . . . ."
+    ;
+    gap: 2.0rem;
+        .box-8{
+            grid-area: box-8;
+            display: flex;
+            justify-content: space-around;
+            img{
+                border-radius: 5.0rem;
+            }
+        }
+        .box-9 {
+            grid-area: box-9;
+            display: flex;
+            flex-direction: column;
+            padding-left: 4.0rem;
+            justify-content: center;
+            p{
+                color: #603F34;
+            }
+        }
+}

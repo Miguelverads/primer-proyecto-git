@@ -1,0 +1,102 @@
+.container-contact {
+    background-color: #E79A33;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "box-11 box-11 box-12 box-12 box-12"
+        "box-11 box-11 box-12 box-12 box-12"
+        "box-11 box-11 box-12 box-12 box-12"
+        "box-11 box-11 box-12 box-12 box-12"
+    ;
+    gap: 10px;
+    padding: 5.0rem;
+    .box-11{
+        grid-area: box-11;
+        display: flex;
+        flex-direction: column;
+        padding-left: 4.0rem;
+        justify-content: center;
+        h1{
+            color: #603F34;
+        }
+    }
+    .box-12 {
+        grid-area: box-12;
+        select{
+            display: flex;
+            margin-top: 2.0rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+            color: #603F34;
+            font-size: 1.6rem;
+        }
+    }   
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        align-content: center;
+        margin-right: 2.0rem;
+        border-radius: 5.0rem;
+        border: solid #603F34;
+        label {
+            display: flex;
+            margin-top: 2.0rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+            color: #603F34;
+            font-size: 1.6rem;
+        }
+        input {
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            color: #603F34;
+            font-family: 'Lato', sans-serif;
+            font-weight: 100;
+            border: #603F34 solid;
+            border-radius: 5.0rem;
+            font-size: 1.2rem;
+        }
+    }
+    .enviar {
+        text-decoration: none;
+        background-color: #603F34;
+        padding-left: 1.0rem;
+        padding-right: 1.0rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 1.0rem;
+        color: #E79A33;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }  
+    .box-13 {
+        grid-area: box-13;
+        display: flex;
+        flex-direction: column;
+    }   
+    .box-14 {
+        grid-area: box-14;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+    } 
+    .box-15 {
+        grid-area: box-15;
+        display: flex;
+        flex-direction: column;
+    }  
+    .box-16 {
+        grid-area: box-16;
+        display: flex;
+        flex-direction: column;
+    } 
+    .box-17 {
+        grid-area: box-17;
+        display: flex;
+        height: 50%;
+    }
+}

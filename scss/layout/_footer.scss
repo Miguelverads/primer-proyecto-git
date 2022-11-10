@@ -1,0 +1,45 @@
+footer {
+    background-color: #f5f0f0;
+    .container-footer {
+        background-color: #f5f0f0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: 15.0rem auto 5.0rem;
+        grid-template-areas:
+            ". info info info ."
+            ". rrss rrss rrss ."
+            ". copyright copyright copyright ."
+        ;
+        margin-top: 2.5rem;
+        margin-right: 2.5rem;
+        margin-left: 2.5rem;
+        a {
+            text-decoration: none;
+            color: #603F34;
+            font-weight: bold;
+            font-size: 1.6rem;
+        }        
+    }
+    .info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+    }
+    .rrss {
+        grid-area: rrss;
+        display: flex;
+        justify-content: center;
+        gap: 1.0rem;
+        align-items: flex-end;
+    }
+    .copyright {
+        grid-area: copyright;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+}

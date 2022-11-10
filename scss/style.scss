@@ -1,0 +1,17 @@
+/**VARIABLES**/
+$background-principal: yellow; /** EJEMPLO**/
+/* & sirve para llamar una clase anidada*/
+/* @extend llama a una sección para compartir atributos*/
+/* @mixin + name y se llama con un @include*/
+
+@import "./base/reset";
+@import "./base/typo";
+@import "./layout/header";
+@import "./layout/main-index";
+@import "./layout/main-menúdigital";
+@import "./layout/main-reservarmesa";
+@import "./layout/main-sobrenosotros";
+@import "./layout/main-contacto";
+@import "./layout/footer";
+@import "./layout/media-tablet";
+@import "./layout/media-mobile";

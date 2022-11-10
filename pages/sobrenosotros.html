@@ -16,12 +16,11 @@
 </head>
 
 <body>
-    <header class="inicio">
-        <div>
+    <header class="container-header">
+            <div>
+                <a href="../index.html"><img src="../assets/image/restaurante.png" alt="logo" class="logo"></a>
+            </div>
             <nav>
-                <div>
-                    <a href="../index.html"><img src="../assets/image/restaurante.png" alt="logo" class="logo"></a>
-                </div>
                 <ul class="navBar">
                     <li><a href="../index.html">Inicio</a></li>
                     <li><a href="./menúdigital.html">Menú digital</a></li>
@@ -29,17 +28,16 @@
                     <li><a href="./sobrenosotros.html">Sobre nosotros</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
-                <div>
-                    <a href="#"><img src="../assets/image/usuario.png" alt="usuario" class="usuario"></a>
-                </div>
             </nav>
-        </div>
+            <div>
+                <a href="#"><img src="../assets/image/usuario.png" alt="usuario" class="usuario"></a>
+            </div>
     </header>
     
     <main> 
         <Section class="container-left">
             <div class="box-5">
-                <h1 class="brown-h1">¿Quiénes somos?</h1>
+                <h1>¿Quiénes somos?</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo officiis placeat, modi voluptas
                     amet
                     beatae error voluptate alias iste quis eum dolorem tempora quia ipsam ipsum explicabo id
@@ -50,15 +48,19 @@
                     expedita cupiditate accusamus!
                 </p>
             </div>
-            <div class="box-7">
-                <img src="../assets/image/sobrenosotros.jpg" alt="Nosotros">
-            </div>
+            <picture class="box-7">
+                <source media="(max-width: 768px)" srcset="../assets/image/768_sobrenosotros.jpg">
+                <source media="(max-width: 576px)" srcset="../assets/image/576_sobrenosotros.jpg">
+                <img src="../assets/image/sobrenosotros.jpg" alt="sobrenosotros">
+            </picture>
         </section>
         <section>
             <div class="container-right">
-                <div class="box-8">
-                    <img src="../assets/image/Aboutus.jpg" alt="">
-                </div>
+                <picture class="box-8">
+                    <source media="(max-width: 768px)" srcset="../assets/image/768_Aboutus.jpg">
+                    <source media="(max-width: 576px)" srcset="../assets/image/576_Aboutus.jpg">
+                    <img src="../assets/image/Aboutus.jpg" alt="aboutus">
+                </picture>
                 <div class="box-9">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque ratione fugiat, ipsam possimus
                         explicabo ducimus, magni, perferendis perspiciatis at et sed ut! Nobis magni numquam obcaecati

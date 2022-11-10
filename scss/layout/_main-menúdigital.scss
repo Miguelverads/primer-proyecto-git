@@ -1,0 +1,41 @@
+.container-menu {
+    margin: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 8.0rem auto 20.0rem;
+    grid-template-areas:
+        "box-19 box-19 ."
+        "box-20 box-20 ."
+        "box-21 box-21 ."
+    ;
+    border: solid #603F34;
+    border-radius: 5.0rem;
+    padding-left: 3.0rem;
+    .box-19 {
+        grid-area: box-19;
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+    }
+    .box-20 {
+        grid-area: box-20;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        img {
+            display: flex;
+            border-radius: 5.0rem;
+            border: solid #603F34;
+        }  
+    }    
+    .box-21 {
+        grid-area: box-21;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p {
+            color: #603F34;
+            margin-top: 0;
+        } 
+    }
+}

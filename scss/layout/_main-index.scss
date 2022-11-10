@@ -1,0 +1,239 @@
+.container-body{
+    background-color: #f5f0f0;
+    width: 100%;
+}
+
+.conatiner-background{
+    display: grid;
+    background-image: url(../assets/image/aji.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+        ". ."
+        ". box-4"
+        ". ."
+    ;
+        .box-4{
+            grid-area: box-4;
+            color: #E79A33;
+            padding-right: 8.0rem;
+        }
+}
+
+.container-left{
+    background-color: #E79A33;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". . . . ."
+        "box-5 box-5 box-7 box-7 box-7"
+        "box-5 box-5 box-7 box-7 box-7"
+        "box-6 . box-7 box-7 box-7"
+        ". . . . ."
+    ;
+    gap: 2.0rem;
+        .box-5{
+            grid-area: box-5;
+            display: flex;
+            flex-direction: column;
+            padding-left: 4.0rem;
+            justify-content: center;
+                h2 {
+                    color: #603F34;
+                }
+            }
+        .box-6{
+            grid-area: box-6;
+            padding-left: 4.0rem;
+            a{
+                text-decoration: none;
+                background-color: #603F34;
+                padding-left: 1.0rem;
+                padding-right: 1.0rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                margin-top: 1.0rem;
+                color: #E79A33;
+                font-weight: bold;
+                font-size: 1.6rem;
+                border-radius: 5.0rem;
+            }
+            
+        }  
+        .box-7{
+            grid-area: box-7;
+            display: flex;
+            img{
+                border-radius: 5.0rem;
+            }
+        }
+}
+
+.container-right{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        ". . . . ."
+        "box-8 box-8 box-8 . ."
+        "box-8 box-8 box-8 box-9 box-9"
+        "box-8 box-8 box-8 box-10 box-10"
+        ". . . . ."
+    ;
+    gap: 2.0rem;
+        .box-8{
+            grid-area: box-8;
+            display: flex;
+            justify-content: space-around;
+            img{
+                border-radius: 5.0rem;
+            }
+        }
+        .box-9 {
+            grid-area: box-9;
+            display: flex;
+            flex-direction: column;
+            padding-left: 4.0rem;
+            justify-content: center;
+            p{
+                color: #603F34;
+            }
+        }
+        .box-10 {
+            grid-area: box-10;
+            a{
+                text-decoration: none;
+                background-color: #E79A33;
+                padding-left: 1.0rem;
+                padding-right: 1.0rem;
+                padding-top: 0.5rem;
+                padding-bottom: 0.5rem;
+                margin-top: 1.0rem;
+                color: #603F34;
+                font-weight: bold;
+                font-size: 1.6rem;
+                border-radius: 5.0rem;
+            }
+        }
+}
+
+.container-contact {
+    background-color: #E79A33;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas:
+        "box-11 box-11 box-12 box-12 box-12"
+        "box-11 box-11 box-12 box-12 box-12"
+        "box-11 box-11 box-12 box-12 box-12"
+        "box-11 box-11 box-12 box-12 box-12"
+    ;
+    gap: 10px;
+    padding: 5.0rem;
+    .box-11{
+        grid-area: box-11;
+        display: flex;
+        flex-direction: column;
+        padding-left: 4.0rem;
+        justify-content: center;
+        h2{
+            color: #603F34;
+        }
+    }
+    .box-12 {
+        grid-area: box-12;
+        select{
+            display: flex;
+            margin-top: 2.0rem;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: 400;
+            color: #603F34;
+            font-size: 1.6rem;
+        }
+    }   
+    fieldset {
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        align-content: center;
+        margin-right: 2.0rem;
+        border-radius: 5.0rem;
+        border: solid #603F34;
+    }
+    
+    fieldset label {
+        display: flex;
+        margin-top: 2.0rem;
+        font-family: 'Josefin Sans', sans-serif;
+        font-weight: 400;
+        color: #603F34;
+        font-size: 1.6rem;
+    }
+    
+    fieldset input {
+        display: flex;
+        margin: 10px;
+        padding: 10px;
+        color: #603F34;
+        font-family: 'Lato', sans-serif;
+        font-weight: 100;
+        border: #603F34 solid;
+        border-radius: 5.0rem;
+        font-size: 1.2rem;
+    }
+    
+    .enviar {
+        text-decoration: none;
+        background-color: #603F34;
+        padding-left: 1.0rem;
+        padding-right: 1.0rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-top: 1.0rem;
+        color: #E79A33;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+    
+    
+    .box-13 {
+        grid-area: box-13;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box-14 {
+        grid-area: box-14;
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+    }
+    
+    .box-15 {
+        grid-area: box-15;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box-16 {
+        grid-area: box-16;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .box-17 {
+        grid-area: box-17;
+        display: flex;
+        height: 50%;
+    }
+}
+
