@@ -130,7 +130,7 @@
     display: grid;
     height: 100vh;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
         "box-11 box-11 box-12 box-12 box-12"
         "box-11 box-11 box-12 box-12 box-12"

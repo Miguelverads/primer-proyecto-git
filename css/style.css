@@ -1,16 +1,11 @@
-@charset "UTF-8";
-/**VARIABLES**/
-/** EJEMPLO**/
-/* & sirve para llamar una clase anidada*/
-/* @extend llama a una sección para compartir atributos*/
-/* @mixin + name y se llama con un @include*/
 * {
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
   box-sizing: border-box; }
-
-html {
-  font-size: 62.5%; }
+  * html {
+    font-size: 62.5%; }
 
 h1 {
   color: #E79A33;
@@ -61,41 +56,42 @@ p {
   line-height: 1.6;
   font-size: 1.6rem; }
 
-.container-header {
-  display: grid;
-  width: 100%;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-areas: "box box-0 box-3";
-  display: flex;
-  justify-content: center;
-  justify-content: space-around;
+header {
   background-color: #E5DCCA; }
-  .container-header ul {
-    list-style: none;
-    display: flex;
-    gap: 6.0rem;
-    padding: 2.0rem; }
-  .container-header a {
-    text-decoration: none;
-    color: #603F34;
-    font-family: 'Lato', sans-serif;
-    font-weight: 900;
+  header a {
     font-size: 2.0rem; }
-  .container-header a:hover {
-    color: #E79A33;
-    display: flex; }
-  .container-header .logo {
-    width: 2.5rem;
-    margin: 1.5rem; }
-  .container-header .usuario {
-    width: 4.0rem;
-    margin: 1.5rem; }
-  .container-header .box-0 {
-    grid-area: box-0; }
-  .container-header .hamburguesa {
-    display: none; }
 
+/* header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    background-color: #E5DCCA;
+    ul{
+        display: flex;
+        gap: 6.0rem;
+        padding: 2.0rem;
+    }
+    a{
+        color: #603F34;
+        font-family: 'Lato', sans-serif;
+        font-weight: 900;
+        font-size: 2.0rem;
+    }
+    a.active, a:hover {
+        color: #E79A33;
+        transition: .5s;
+    }
+    .logo {
+        width: 4.5rem;
+        margin: 1.5rem;
+    }
+    .usuario {
+        width: 4.0rem;
+        margin: 1.5rem;
+    }
+}
+*/
 .container-body {
   background-color: #f5f0f0;
   width: 100%; }
@@ -194,7 +190,7 @@ p {
   display: grid;
   height: 100vh;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   grid-template-areas: "box-11 box-11 box-12 box-12 box-12" "box-11 box-11 box-12 box-12 box-12" "box-11 box-11 box-12 box-12 box-12" "box-11 box-11 box-12 box-12 box-12";
   gap: 10px;
   padding: 5.0rem; }
@@ -537,15 +533,73 @@ footer {
     justify-content: flex-end; }
 
 @media (max-width: 768px) {
-  .container-header {
-    width: 100%;
+  .container-left {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "box box-0 box-3";
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    background-color: #E5DCCA; }
+    grid-template-areas: "box-5" "box-7" "box-6"; }
+    .container-left img {
+      width: 90%;
+      display: flex;
+      flex-direction: row;
+      align-content: center; }
+  .container-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box-9 box-9" "box-8 box-8" "box-10 ."; }
+    .container-right .box-10 {
+      display: flex;
+      align-items: center; }
+  .container-contact {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "box-11 box-11" "box-12 box-12";
+    justify-content: center; }
+  .container-menu {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6.0rem 25.0rem 15.0rem;
+    grid-template-areas: "box-19 box-19 . ." "box-20 box-20 . ." "box-21 box-21 . ."; }
+  .container-footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15.0rem auto 5.0rem;
+    grid-template-areas: "info info info" ". rrss ." "copyright copyright copyright"; }
+    .container-footer .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
+
+@media (max-width: 1023px) {
+  .container-left {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box-5" "box-7" "box-6"; }
+  .container-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box-9 box-9" "box-8 box-8" "box-10 ."; }
+    .container-right .box-10 {
+      display: flex;
+      align-items: center; }
+  .container-contact {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "box-11 box-11" "box-12 box-12";
+    justify-content: center; }
+  .container-menu {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6.0rem 25.0rem 15.0rem;
+    grid-template-areas: "box-19 box-19 . ." "box-20 box-20 . ." "box-21 box-21 . ."; }
+  .container-footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15.0rem auto 5.0rem;
+    grid-template-areas: "info info info" ". rrss ." "copyright copyright copyright"; }
+    .container-footer .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
+
+@media (max-width: 1024px) {
   .container-left {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -579,61 +633,74 @@ footer {
       flex-direction: column;
       justify-content: center; } }
 
-@media (max-width: 576px) {
-  Header nav {
-    display: none; }
-  Header .usuario {
-    display: none; }
-  Header .menu-check {
-    display: none; }
-  Header .menu-check:not(:checked) ~ nav {
-    display: none; }
-  Header .menu-check:checked ~ nav {
-    display: flex; }
-  Header .hamburguesa {
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 2.0rem;
-    font-weight: bolder;
-    align-items: center;
-    margin-right: 0.7rem; }
-    Header .hamburguesa .menu {
-      border: #603F34 solid;
-      border-radius: 0.5rem; }
-      Header .hamburguesa .menu:hover {
-        background-color: #E79A33;
-        color: #E5DCCA; }
-    Header .hamburguesa .menu-cerrar {
-      display: none; }
-    Header .hamburguesa .menu-check:checked ~ label .menu-abrir {
-      display: none; }
-    Header .hamburguesa .menu-check:checked ~ label .menu-cerrar {
-      display: block; }
-  Header header .hamburgesa nav {
-    position: absolute;
-    padding: 0.5rem;
-    margin: 0.5rem;
-    height: 100%;
-    background-color: #603F34;
-    color: #E5DCCA; }
+@media (max-width: 1200px) {
+  .container-left {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box-5 box-5" "box-7 box-7" "box-6 ."; }
+    .container-left .box-6 {
+      display: flex;
+      align-items: center; }
+  .container-right {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box-9 box-9" "box-8 box-8" "box-10 ."; }
+    .container-right .box-10 {
+      display: flex;
+      align-items: center; }
+  .container-contact {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "box-11 box-11" "box-12 box-12";
+    justify-content: center; }
+  .container-menu {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 6.0rem 25.0rem 15.0rem;
+    grid-template-areas: "box-19 box-19 . ." "box-20 box-20 . ." "box-21 box-21 . ."; }
+  .container-footer {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 15.0rem auto 5.0rem;
+    grid-template-areas: "info info info" ". rrss ." "copyright copyright copyright"; }
+    .container-footer .info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center; } }
+
+@media (max-width: 320px) {
   .container-left {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box-5" "box-7" "box-6";
+    margin: 5.0rem; } }
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .container-left {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: "box-5" "box-7" "box-6";
+    margin: 5.0rem; } }
+
+@media (max-width: 576px) and (min-width: 480px) {
+  header p {
+    font-size: 1.6rem; }
+  header .container-left {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "box-5" "box-7" "box-6"; }
-  .container-right {
+  header .container-right {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "box-9" "box-8" "box-10"; }
-  .container-contact {
+  header .container-contact {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "box-11" "box-12"; }
-  .container-menu {
+  header .container-menu {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "box-19" "box-20" "box-21"; }
-  .container-footer {
+  header .container-footer {
     grid-template-columns: 1fr;
     grid-template-rows: 15.0rem auto 5.0rem;
     grid-template-areas: "info" "rrss" "copyright"; } }

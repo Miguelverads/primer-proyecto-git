@@ -1,16 +1,185 @@
 @media (max-width: 768px){
-    .container-header{
-        width: 100%;
+    .container-left{
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
         grid-template-areas:
-            "box box-0 box-3"
+            "box-5"
+            "box-7"
+            "box-6"
         ;
-        display: flex;
-        justify-content: center;
-        justify-content: space-around;
-        background-color: #E5DCCA;
+        img{
+            width: 90%;
+            display: flex;
+            flex-direction: row;
+            align-content: center;
+        }
     }
+    .container-right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-9 box-9"
+            "box-8 box-8"
+            "box-10 ."
+        ;
+        .box-10{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .container-contact{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "box-11 box-11"
+            "box-12 box-12"
+        ;
+        justify-content: center;
+    }
+    .container-menu{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 6.0rem 25.0rem 15.0rem;
+        grid-template-areas:
+            "box-19 box-19 . ."
+            "box-20 box-20 . ."
+            "box-21 box-21 . ."
+        ;
+    }
+    .container-footer{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 15.0rem auto 5.0rem;
+        grid-template-areas:
+            "info info info"
+            ". rrss ."
+            "copyright copyright copyright"
+        ;
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 1023px){
+    .container-left{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-5"
+            "box-7"
+            "box-6"
+        ;
+    }
+    .container-right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-9 box-9"
+            "box-8 box-8"
+            "box-10 ."
+        ;
+        .box-10{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .container-contact{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "box-11 box-11"
+            "box-12 box-12"
+        ;
+        justify-content: center;
+    }
+    .container-menu{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 6.0rem 25.0rem 15.0rem;
+        grid-template-areas:
+            "box-19 box-19 . ."
+            "box-20 box-20 . ."
+            "box-21 box-21 . ."
+        ;
+    }
+    .container-footer{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 15.0rem auto 5.0rem;
+        grid-template-areas:
+            "info info info"
+            ". rrss ."
+            "copyright copyright copyright"
+        ;
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 1024px){
+    .container-left{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-5 box-5"
+            "box-7 box-7"
+            "box-6 ."
+        ;
+        .box-6{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .container-right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-9 box-9"
+            "box-8 box-8"
+            "box-10 ."
+        ;
+        .box-10{
+            display: flex;
+            align-items: center;
+        }
+    }
+    .container-contact{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+            "box-11 box-11"
+            "box-12 box-12"
+        ;
+        justify-content: center;
+    }
+    .container-menu{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 6.0rem 25.0rem 15.0rem;
+        grid-template-areas:
+            "box-19 box-19 . ."
+            "box-20 box-20 . ."
+            "box-21 box-21 . ."
+        ;
+    }
+    .container-footer{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 15.0rem auto 5.0rem;
+        grid-template-areas:
+            "info info info"
+            ". rrss ."
+            "copyright copyright copyright"
+        ;
+        .info{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+@media (max-width: 1200px){
     .container-left{
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(3, 1fr);

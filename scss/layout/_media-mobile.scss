@@ -1,55 +1,32 @@
-@media (max-width: 576px) {
-    Header {
-        nav {
-            display: none;
-        }
-        .usuario{
-            display: none;
-        }
-        .menu-check{
-            display: none;
-        }
-        .menu-check:not(:checked) ~ nav{
-            display: none;
-        }
-        .menu-check:checked ~ nav{
-            display: flex;
-        }
-        .hamburguesa {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            font-size: 2.0rem;
-            font-weight: bolder;
-            align-items: center;
-            margin-right: 0.7rem;
-            .menu{
-                border: #603F34 solid;
-                border-radius: 0.5rem;
-                &:hover{
-                    background-color: #E79A33 ;
-                    color: #E5DCCA;
-                }
-            }
-            .menu-cerrar{
-                display: none;
-            }
-            .menu-check:checked ~ label .menu-abrir{
-                display: none;
-            }
-            .menu-check:checked ~label .menu-cerrar {
-                display: block;
-            }
-        }
-        header .hamburgesa nav {
-            position: absolute;
-            padding: 0.5rem;
-            margin: 0.5rem;
-            height: 100%;
-            background-color: #603F34;
-            color: #E5DCCA;
-        }
+@media (max-width: 320px){
+    .container-left {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-5"
+            "box-7"
+            "box-6"
+        ;
+        margin: 5.0rem;
+    }
 }
+@media (max-width: 480px) and (min-width: 320px){
+    .container-left {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas:
+            "box-5"
+            "box-7"
+            "box-6"
+        ;
+        margin: 5.0rem;
+    }
+}
+@media (max-width: 576px) and (min-width: 480px){
+    header{
+        p{
+            font-size: 1.6rem;
+        }
     .container-left {
         grid-template-columns: 1fr;
         grid-template-rows: repeat(3, 1fr);
@@ -94,4 +71,5 @@
             "copyright"
         ;
     }
+}
 }
