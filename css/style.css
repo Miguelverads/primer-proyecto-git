@@ -4,8 +4,9 @@
   text-decoration: none;
   list-style: none;
   box-sizing: border-box; }
-  * html {
-    font-size: 62.5%; }
+
+html {
+  font-size: 62.5%; }
 
 h1 {
   color: #E79A33;
@@ -56,6 +57,9 @@ p {
   line-height: 1.6;
   font-size: 1.6rem; }
 
+a {
+  text-decoration: none; }
+
 header {
   background-color: #E5DCCA; }
   header a {
@@ -92,10 +96,6 @@ header {
     }
 }
 */
-.container-body {
-  background-color: #f5f0f0;
-  width: 100%; }
-
 .conatiner-background {
   display: grid;
   background-image: url(../assets/image/aji.png);
@@ -116,90 +116,66 @@ header {
   display: grid;
   height: 100vh;
   width: 100%;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: ". . . . ." "box-5 box-5 box-7 box-7 box-7" "box-5 box-5 box-7 box-7 box-7" "box-6 . box-7 box-7 box-7" ". . . . .";
-  gap: 2.0rem; }
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "box-5 box-7 box-7" "box-5 box-7 box-7" "box-6 . .";
+  padding: 5.0rem; }
   .container-left .box-5 {
-    grid-area: box-5;
-    display: flex;
-    flex-direction: column;
-    padding-left: 4.0rem;
-    justify-content: center; }
+    grid-area: box-5; }
     .container-left .box-5 h2 {
       color: #603F34; }
   .container-left .box-6 {
     grid-area: box-6;
     padding-left: 4.0rem; }
     .container-left .box-6 a {
-      text-decoration: none;
       background-color: #603F34;
-      padding-left: 1.0rem;
-      padding-right: 1.0rem;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      margin-top: 1.0rem;
       color: #E79A33;
       font-weight: bold;
       font-size: 1.6rem;
-      border-radius: 5.0rem; }
+      border-radius: 5.0rem;
+      padding: 1.0rem; }
   .container-left .box-7 {
-    grid-area: box-7;
-    display: flex; }
+    grid-area: box-7; }
     .container-left .box-7 img {
       border-radius: 5.0rem; }
 
 .container-right {
   display: grid;
   height: 100vh;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas: ". . . . ." "box-8 box-8 box-8 . ." "box-8 box-8 box-8 box-9 box-9" "box-8 box-8 box-8 box-10 box-10" ". . . . .";
-  gap: 2.0rem; }
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "box-8 box-8 box-8 . ." "box-8 box-8 box-8 box-9 box-9" "box-8 box-8 box-8 box-10 box-10";
+  padding: 5.0rem; }
   .container-right .box-8 {
-    grid-area: box-8;
-    display: flex;
-    justify-content: space-around; }
+    grid-area: box-8; }
     .container-right .box-8 img {
       border-radius: 5.0rem; }
   .container-right .box-9 {
-    grid-area: box-9;
-    display: flex;
-    flex-direction: column;
-    padding-left: 4.0rem;
-    justify-content: center; }
+    grid-area: box-9; }
     .container-right .box-9 p {
       color: #603F34; }
   .container-right .box-10 {
-    grid-area: box-10; }
+    grid-area: box-10;
+    padding-left: 4.0rem; }
     .container-right .box-10 a {
-      text-decoration: none;
       background-color: #E79A33;
-      padding-left: 1.0rem;
-      padding-right: 1.0rem;
-      padding-top: 0.5rem;
-      padding-bottom: 0.5rem;
-      margin-top: 1.0rem;
       color: #603F34;
       font-weight: bold;
       font-size: 1.6rem;
-      border-radius: 5.0rem; }
+      border-radius: 5.0rem;
+      padding: 1.0rem; }
 
 .container-contact {
   background-color: #E79A33;
   display: grid;
+  width: 100%;
   height: 100vh;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-template-areas: "box-11 box-11 box-12 box-12 box-12" "box-11 box-11 box-12 box-12 box-12" "box-11 box-11 box-12 box-12 box-12" "box-11 box-11 box-12 box-12 box-12";
-  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: "box-11 box-12 box-12" "box-11 box-12 box-12" "box-11 box-12 box-12";
   padding: 5.0rem; }
   .container-contact .box-11 {
-    grid-area: box-11;
-    display: flex;
-    flex-direction: column;
-    padding-left: 4.0rem;
-    justify-content: center; }
+    grid-area: box-11; }
     .container-contact .box-11 h2 {
       color: #603F34; }
   .container-contact .box-12 {
@@ -219,14 +195,14 @@ header {
     margin-right: 2.0rem;
     border-radius: 5.0rem;
     border: solid #603F34; }
-  .container-contact fieldset label {
+  .container-contact label {
     display: flex;
     margin-top: 2.0rem;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
     color: #603F34;
     font-size: 1.6rem; }
-  .container-contact fieldset input {
+  .container-contact input {
     display: flex;
     margin: 10px;
     padding: 10px;
@@ -536,25 +512,31 @@ footer {
   .container-left {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "box-5" "box-7" "box-6"; }
-    .container-left img {
-      width: 90%;
+    grid-template-areas: "box-5" "box-7" "box-6";
+    padding: 2.0rem; }
+    .container-left .box-7 {
       display: flex;
-      flex-direction: row;
-      align-content: center; }
+      justify-content: center; }
+    .container-left img {
+      width: 90%; }
   .container-right {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "box-9 box-9" "box-8 box-8" "box-10 ."; }
+    grid-template-areas: "box-9" "box-8" "box-10";
+    padding: 2.0rem; }
     .container-right .box-10 {
-      display: flex;
-      align-items: center; }
+      margin-left: 2.0rem; }
+    .container-right img {
+      width: 90%; }
   .container-contact {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "box-11 box-11" "box-12 box-12";
-    justify-content: center; }
+    grid-template-areas: "box-11" "box-12";
+    margin-left: 0; }
+    .container-contact .box-11 {
+      display: flex;
+      justify-content: center; }
   .container-menu {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 6.0rem 25.0rem 15.0rem;
@@ -570,22 +552,33 @@ footer {
 
 @media (max-width: 1023px) {
   .container-left {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "box-5" "box-7" "box-6"; }
+    grid-template-areas: "box-5 box-5" "box-7 box-7" "box-6 box-6";
+    padding: 2.0rem; }
+    .container-left .box-7 {
+      display: flex;
+      justify-content: center; }
+    .container-left img {
+      width: 90%; }
   .container-right {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "box-9 box-9" "box-8 box-8" "box-10 ."; }
-    .container-right .box-10 {
+    grid-template-areas: "box-9 box-9" "box-8 box-8" "box-10 box-10";
+    padding: 2.0rem; }
+    .container-right .box-8 {
       display: flex;
-      align-items: center; }
+      justify-content: center; }
+    .container-right .box-10 {
+      padding: 2.0rem; }
+    .container-right img {
+      width: 90%; }
   .container-contact {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "box-11 box-11" "box-12 box-12";
-    justify-content: center; }
+    padding: 2.0rem; }
   .container-menu {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 6.0rem 25.0rem 15.0rem;
